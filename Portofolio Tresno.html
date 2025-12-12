@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Tresno</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: url("https://i.pinimg.com/736x/b1/5a/bf/b15abf9ad03732f4782555026a756d2e.jpg") no-repeat center/cover;
+            color: rgb(226, 231, 226);
+        }
+
+        .overlay {
+            background: rgba(45, 106, 114, 0.55);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background: rgba(21, 243, 213, 0.15);
+            padding: 25px;
+            border-radius: 18px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(6px);
+        }
+
+        h1 {
+            font-size: 45px;
+            margin: 0;
+            text-align: center;
+        }
+        h2 {
+            opacity: 0.8;
+            text-align: center;
+            margin-top: 5px;
+            font-weight: 300;
+        }
+
+        /* FOTO PROFIL  */
+        .profile {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid rgba(19, 192, 245, 0.7);
+            object-fit: cover;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .about-text {
+            text-align: center;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .list-2col {
+            columns: 2;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* SOSIAL MEDIA */
+        .social {
+            text-align: center;
+        }
+        .social a {
+            text-decoration: none;
+            color: rgb(70, 127, 145);
+            padding: 10px 15px;
+            background: rgba(255,255,255,0.18);
+            border-radius: 10px;
+            margin: 6px;
+            display: inline-block;
+        }
+        .social a:hover {
+            background: rgba(80, 230, 217, 0.35);
+        }
+
+        footer {
+            margin-top: 25px;
+            opacity: 0.7;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="overlay">
+    <div class="container">
+
+        <h1>Tresno Anggara Saputra</h1>
+        <h2>Halo Qhaqha</h2>
+
+        <!-- FOTO PROFIL  -->
+        <img class="profile" src="https://i.pinimg.com/736x/5a/39/8d/5a398de3b45eac4416bf6f996b59f065.jpg">
+
+        <!-- ABOUT -->
+        <div class="card">
+            <div class="section-title">Tentang Saya</div>
+            <p class="about-text">
+                Hai! Saya Tresno. Saya menyukai hal-hal aesthetic, digital, fotografi,
+                editing, dan eksplor sesuatu yang baru. Dan juga saya suka membuat sesuatu
+                yang simple. 
+                Portofolio ini dibuat sebagai cerminan gaya dan selera visual saya.
+            </p>
+        </div>
+
+        <!-- MINAT -->
+        <div class="card">
+            <div class="section-title">Hal yang Saya Suka</div>
+            <div class="list-2col">
+                • Fotografi aesthetic<br>
+                • Edit video / foto<br>
+                • Browsing inspirasi<br>
+                • Desain simple vibes<br>
+                • Jalan-jalan<br>
+                • Musik chill<br>
+                • Game santai<br>
+                • Eksplor media sosial
+            </div>
+        </div>
+
+        <!-- SOSMED -->
+        <div class="card">
+            <div class="section-title">Media Sosial</div>
+            <div class="social">
+                <a href="#">Instagram</a>
+                <a href="#">TikTok</a>
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+                <a href="#">WhatsApp</a>
+            </div>
+        </div>
+
+        <footer>© 2025 Portofolio </footer>
+    </div>
+</div>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
